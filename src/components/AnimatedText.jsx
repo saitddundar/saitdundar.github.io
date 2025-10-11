@@ -10,6 +10,7 @@ const AnimatedText = () => {
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [showText, setShowText] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,8 +27,23 @@ const AnimatedText = () => {
     return () => clearInterval(interval);
   }, [texts.length]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      // Hide text completely when scrolling down
+      if (scrollTop > 50) {
+        setShowText(false);
+      } else {
+        setShowText(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="animated-text-container">
+    <div className={`animated-text-container ${showText ? 'show' : 'hide'}`}>
       <h1 className={`animated-text ${isVisible ? 'visible' : 'hidden'}`}>
         {texts[currentTextIndex]}
       </h1>

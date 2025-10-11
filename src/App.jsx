@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Header from './components/Header';
 import AnimatedText from './components/AnimatedText';
-import ScrollImage from './components/ScrollImage';
+import AboutSection from './components/AboutSection';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,10 +12,7 @@ function App() {
     <>
       <Header />
       <AnimatedText />
-      <ScrollImage 
-        imagePath="/kim-busik.jpg" 
-        alt="Kim Busik" 
-      />
+      <AboutSection />
       
       {/* Scrollable content to enable scroll animation */}
       <div style={{ height: '200vh', background: 'transparent' }}></div>

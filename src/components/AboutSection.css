@@ -1,0 +1,150 @@
+.about-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 90%;
+  max-width: 1200px;
+}
+
+.about-section.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.about-section.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  height: 100%;
+}
+
+.photo-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.about-content {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 0 0 1.8rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  text-align: justify;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-section {
+    width: 95%;
+  }
+  
+  .about-layout {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .about-photo {
+    max-width: 300px;
+  }
+  
+  .about-content {
+    text-align: center;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    width: 98%;
+  }
+  
+  .about-layout {
+    gap: 30px;
+  }
+  
+  .about-photo {
+    max-width: 250px;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Smooth entrance animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-content {
+  animation: slideUp 0.8s ease-out 0.2s both;
+}

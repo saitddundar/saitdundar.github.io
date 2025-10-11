@@ -8,7 +8,7 @@ function Header() {
         <div className="logo">Mehmet Sait Dündar</div>
         <nav>
           <a href="#">Github</a>
-          <a href="#">About</a>
+          <a href="#about">About</a>
           <a href="#">Contact</a>
         </nav>
       </div>
