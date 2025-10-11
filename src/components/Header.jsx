@@ -5,9 +5,9 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="logo">Mehmet Sait Dündar</div>
+        <a href="#" className="logo">Mehmet Sait Dündar</a>
         <nav>
-          <a href="#">Github</a>
+          <a href="https://github.com/saitddundar" target="_blank" rel="noopener noreferrer">Github</a>
           <a href="#about">About</a>
           <a href="#">Contact</a>
         </nav>

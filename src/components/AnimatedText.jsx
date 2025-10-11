@@ -22,19 +22,14 @@ const AnimatedText = () => {
       const currentPhrase = texts[phraseIndex];
       
       if (isDeleting) {
-        // Silme işlemi
         setDisplayedText(currentPhrase.substring(0, displayedText.length - 1));
       } else {
-        // Yazma işlemi
         setDisplayedText(currentPhrase.substring(0, displayedText.length + 1));
       }
 
-      // Durum değiştirme mantığı
       if (!isDeleting && displayedText === currentPhrase) {
-        // Yazma bitti, silmeye başlamadan önce bekle
         setTimeout(() => setIsDeleting(true), delayBetweenPhrases);
       } else if (isDeleting && displayedText === '') {
-        // Silme bitti, bir sonraki cümleye geç
         setIsDeleting(false);
         setPhraseIndex((prevIndex) => (prevIndex + 1) % texts.length);
       }
@@ -49,7 +44,6 @@ const AnimatedText = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      // Hide text completely when scrolling down
       if (scrollTop > 50) {
         setShowText(false);
       } else {
@@ -63,9 +57,14 @@ const AnimatedText = () => {
 
   return (
     <div className={`animated-text-container ${showText ? 'show' : 'hide'}`}>
-      <h1 className="animated-text">
-        {displayedText}
-      </h1>
+      <div className="text-wrapper">
+        <h1 className="animated-text">
+          {displayedText}
+        </h1>
+        <p className="subtitle">
+          A computer science student passionate about backend development, cloud, and solving complex problems.
+        </p>
+      </div>
     </div>
   );
 };

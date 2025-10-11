@@ -1,23 +1,32 @@
 .animated-text-container {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 100;
-  text-align: center;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  width: max-content;
+}
+
+.text-wrapper {
+  /* En uzun metne göre yaklaşık bir genişlik. Kaymayı önler. */
+  width: 700px; 
   max-width: 90vw;
+  /* İçindeki tüm metinleri ortala */
+  text-align: center;
 }
 
 .animated-text-container.show {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 }
 
 .animated-text-container.hide {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: scale(0.8);
   pointer-events: none;
 }
 
@@ -34,6 +43,20 @@
   border-right: 0.1em solid white;
   animation: blink-caret 1s step-end infinite;
   white-space: nowrap; 
+  /* Metin silindiğinde dikey kaymayı önler */
+  min-height: 4rem; 
+  /* Metni ortala ama imlecin doğru çalışması için inline-block kullan */
+  display: inline-block;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 1rem;
+  line-height: 1.6;
+  /* text-align: left; kaldırıldı, üst kapsayıcıdan miras alacak */
 }
 
 @keyframes blink-caret {
@@ -44,11 +67,19 @@
 @media (max-width: 768px) {
   .animated-text {
     font-size: 2.5rem;
+    min-height: 3rem;
+  }
+  .subtitle {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .animated-text {
     font-size: 2rem;
+    min-height: 2.5rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
   }
 }
