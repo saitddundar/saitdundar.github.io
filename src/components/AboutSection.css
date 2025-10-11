@@ -1,35 +1,33 @@
 .about-section {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1001;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  width: 90%;
+  position: relative; /* fixed yerine relative */
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.about-container {
   max-width: 1200px;
-}
-
-.about-section.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.about-section.hidden {
-  opacity: 0;
-  visibility: hidden;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .about-layout {
   display: flex;
   align-items: center;
   gap: 60px;
-  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .photo-section {
   flex: 1;
+  min-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +45,7 @@
 
 .about-content {
   flex: 1;
+  min-width: 300px;
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Inter', sans-serif;
   text-align: left;
@@ -66,53 +65,65 @@
   margin: 0 0 1.8rem 0;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 400;
-  text-align: justify;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .about-content p:last-child {
   margin-bottom: 0;
 }
 
+/* Gezinme butonları için konteyner */
+.about-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+/* Gezinme butonları (AnimatedText ile aynı stil) */
+.about-section .section-nav-button {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 10px 24px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.about-section .section-nav-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
-  .about-section {
-    width: 95%;
-  }
-  
   .about-layout {
     flex-direction: column;
     gap: 40px;
-    text-align: center;
   }
   
   .about-photo {
     max-width: 300px;
   }
   
-  .about-content {
-    text-align: center;
-  }
-  
   .about-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    text-align: center;
   }
   
   .about-content p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-  .about-section {
-    width: 98%;
-  }
-  
   .about-layout {
     gap: 30px;
   }
@@ -133,18 +144,12 @@
   }
 }
 
-/* Smooth entrance animation */
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Animasyon */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.about-content {
-  animation: slideUp 0.8s ease-out 0.2s both;
+.about-section.active {
+  animation: fadeIn 0.5s ease forwards;
 }
