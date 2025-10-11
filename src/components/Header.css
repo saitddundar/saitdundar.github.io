@@ -10,19 +10,19 @@
 }
 
 .container {
-  padding: 0;        /* Tüm padding'i kaldırdık */
+  padding: 0;        
   width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 48px;  /* Daha kompakt bir yükseklik */
+  min-height: 48px;  
 }
 
 .logo {
   color: #fff;
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem; /* Logoyu biraz küçülttük */
+  font-size: 0.9rem; 
   font-weight: 600;
   text-align: center;
   letter-spacing: -0.02em;
@@ -43,9 +43,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
-  margin-left: 14px; /* Link aralığını azalttık */
+  margin-left: 14px; 
   transition: color 0.2s;
-  text-transform: uppercase;
   letter-spacing: -0.01em;
   line-height: 1;
 }

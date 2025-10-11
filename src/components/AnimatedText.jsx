@@ -21,7 +21,6 @@ const AnimatedText = () => {
       }, 500);
     }, 5000);
 
-    // Initial animation
     setIsVisible(true);
 
     return () => clearInterval(interval);

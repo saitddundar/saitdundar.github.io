@@ -30,7 +30,6 @@
   transform: translateY(20px);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .animated-text {
     font-size: 2.5rem;
@@ -43,7 +42,6 @@
   }
 }
 
-/* Smooth fade-in animation for the entire container */
 .animated-text-container {
   animation: fadeIn 1.5s ease-out;
 }
