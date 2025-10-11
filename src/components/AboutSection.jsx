@@ -19,6 +19,11 @@ const AboutSection = () => {
     const handleAboutClick = (e) => {
       e.preventDefault();
       setIsVisible(true);
+      // Scroll to center to show the About section
+      window.scrollTo({
+        top: window.innerHeight / 2,
+        behavior: 'smooth'
+      });
     };
 
     // Add click listener to About link
