@@ -21,10 +21,11 @@
 
 .logo {
   color: #fff;
+  font-family: 'Inter', sans-serif;
   font-size: 0.9rem; /* Logoyu biraz küçülttük */
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.02em;
   line-height: 1;
   display: flex;
   justify-content: center;
@@ -39,10 +40,12 @@
 .header nav a {
   color: #fff;
   text-decoration: none;
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
+  font-weight: 500;
   margin-left: 14px; /* Link aralığını azalttık */
   transition: color 0.2s;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.01em;
   line-height: 1;
 }

@@ -1,0 +1,60 @@
+.animated-text-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  text-align: center;
+}
+
+.animated-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.animated-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-text.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 2rem;
+  }
+}
+
+/* Smooth fade-in animation for the entire container */
+.animated-text-container {
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
