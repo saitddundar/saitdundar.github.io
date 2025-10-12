@@ -14,10 +14,15 @@
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 4rem;
+  font-weight: 700;
   margin-bottom: 3rem;
-  font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'BBH Sans Bartle', 'Orbitron', 'JetBrains Mono', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0000c8;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  
+  filter: blur(0.5px);
 }
 
 .placeholder-content {

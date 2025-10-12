@@ -5,30 +5,21 @@ const Section2 = () => {
   return (
     <section className="section2" id="about">
       <div className="section2-content">
-        <h2 className="section-title">About Me</h2>
-        <div className="about-content">
-          <div className="about-text">
-            <p>
-              Merhaba! Ben Sait Dündar, tutkulu bir Full Stack Developer'ım. 
-              Modern web teknolojileri ile kullanıcı dostu ve performanslı 
-              uygulamalar geliştirmeyi seviyorum.
-            </p>
-            <p>
-              React, Node.js, Python ve diğer modern teknolojilerle projeler 
-              geliştiriyorum. Sürekli öğrenmeye ve kendimi geliştirmeye odaklanıyorum.
-            </p>
-          </div>
-          <div className="skills">
-            <h3>Skills</h3>
-            <div className="skills-grid">
-              <span className="skill-tag">React</span>
-              <span className="skill-tag">Node.js</span>
-              <span className="skill-tag">Python</span>
-              <span className="skill-tag">JavaScript</span>
-              <span className="skill-tag">CSS3</span>
-              <span className="skill-tag">HTML5</span>
-            </div>
-          </div>
+        <div className="red-card">
+          <p className="main-text">
+           A CS Student passionate about backend development, cloud, and solving complex problems.
+          
+          </p>
+          
+        </div>
+        
+        <div className="services-list">
+          <span className="service-item">Visual Front-End Development</span>
+          <span className="service-item">Back-End Development</span>
+          <span className="service-item">Integration</span>
+          <span className="service-item">Motion Design</span>
+          <span className="service-item">UX Design</span>
+          <span className="service-item">Visual Design</span>
         </div>
       </div>
     </section>

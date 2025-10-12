@@ -1,79 +1,124 @@
 .section2 {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
-  color: white;
-  padding: 2rem;
+  background-color: #ffffff;
+  padding: 4rem 2rem;
 }
 
 .section2-content {
-  max-width: 800px;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 3rem;
-  font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
-  align-items: start;
 }
 
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+.red-card {
+  background-color: #dc2626;
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
 }
 
-.skills h3 {
+.main-text {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left;
 }
 
-.skills-grid {
+.cta-button {
+  background-color: #374151;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4b5563;
+  transform: translateY(-1px);
+}
+
+.hamburger-icon {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.services-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.skill-tag {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+.service-item {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.service-item:hover {
+  border-bottom-color: #dc2626;
 }
 
 @media (max-width: 768px) {
   .section2 {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   
-  .section-title {
-    font-size: 2rem;
+  .red-card {
+    padding: 2rem;
+    border-radius: 12px;
   }
   
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .main-text {
+    font-size: 1.25rem;
+    line-height: 1.5;
   }
   
-  .about-text p {
-    text-align: center;
-    font-size: 1rem;
+  .services-list {
+    gap: 0.5rem;
+  }
+  
+  .service-item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .red-card {
+    padding: 1.5rem;
+  }
+  
+  .main-text {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
   }
 }

@@ -18,31 +18,27 @@ const Section1 = () => {
     
     const timeout = setTimeout(() => {
       if (!isDeleting) {
-        // Yazma işlemi
         if (displayText.length < currentText.length) {
           setDisplayText(currentText.slice(0, displayText.length + 1));
         } else {
-          // Yazma tamamlandı, 2 saniye bekle
           setTimeout(() => {
             setIsDeleting(true);
           }, 2000);
         }
       } else {
-        // Silme işlemi
         if (displayText.length > 0) {
           setDisplayText(displayText.slice(0, -1));
         } else {
-          // Silme tamamlandı, bir sonraki metne geç
+          
           setIsDeleting(false);
           setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
         }
       }
-    }, isDeleting ? 50 : 100); // Silme daha hızlı
+    }, isDeleting ? 50 : 100); 
 
     return () => clearTimeout(timeout);
   }, [displayText, currentTextIndex, isDeleting, texts]);
 
-  // Cursor animasyonu
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
@@ -50,6 +46,13 @@ const Section1 = () => {
 
     return () => clearInterval(cursorInterval);
   }, []);
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="section1" id="home">
@@ -59,6 +62,11 @@ const Section1 = () => {
           <span className={`cursor ${showCursor ? 'visible' : 'hidden'}`}>|</span>
         </h1>
         <p className="subtitle">A computer science student passionate about backend development, cloud, and solving complex problems.</p>
+        
+        <div className="scroll-indicator" onClick={scrollToAbout}>
+          <span className="scroll-text">About</span>
+          <div className="scroll-arrow">↓</div>
+        </div>
       </div>
     </section>
   );
