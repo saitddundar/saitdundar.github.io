@@ -1,0 +1,204 @@
+/* Tüm sayfa düzeni */
+.full-page-layout {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Her bir tam sayfa bölüm */
+.page-section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero bölümü (1. sayfa) */
+.hero-section {
+  background-color: #000;
+}
+
+/* Boş bölüm (3. sayfa) */
+.empty-section {
+  background-color: #000;
+  color: #fff;
+  /* 3. sayfa olduğu için top pozisyonu ayarlı */
+  top: 200vh;
+  position: absolute;
+}
+
+/* Bölüm içeriği */
+.section-content {
+  max-width: 1200px;
+  width: 90%;
+  padding: 2rem;
+}
+
+/* Yazı animasyonu ve original kod */
+.animated-text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-wrapper {
+  width: 700px; 
+  max-width: 90vw;
+  text-align: center;
+}
+
+.animated-text-container.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.animated-text-container.hide {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.animated-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  border-right: 0.1em solid white;
+  animation: blink-caret 1s step-end infinite;
+  white-space: nowrap; 
+  min-height: 4rem; 
+  display: inline-block;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Bölümler arası navigasyon butonu */
+.section-nav-button {
+  margin-top: 2rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 10px 24px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.section-nav-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.back-button {
+  margin-right: 10px;
+}
+
+/* Empty bölümü başlık ve metin */
+.empty-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.empty-section p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* Caret animasyonu */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 2.5rem;
+    min-height: 3rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .about-section h2,
+  .empty-section h2 {
+    font-size: 2rem;
+  }
+  
+  .about-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .about-photo {
+    max-width: 300px;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 2rem;
+    min-height: 2.5rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .about-section h2,
+  .empty-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-layout {
+    gap: 30px;
+  }
+  
+  .about-photo {
+    max-width: 250px;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+}
