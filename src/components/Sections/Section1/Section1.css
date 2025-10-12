@@ -20,6 +20,29 @@
   margin-bottom: 2rem;
   font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.2;
+  min-height: 4.2rem; /* Sabit yükseklik için */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor {
+  font-weight: 300;
+  color: #fff;
+  animation: blink 1s infinite;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
+
+.cursor.hidden {
+  opacity: 0;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 .subtitle {
