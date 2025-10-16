@@ -3,9 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #d9d4ca;
-  color: white;
+  background-color: #0d1117;
+  color: #fff;
   padding: 2rem;
+  font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
 }
 
 .section3-content {
@@ -14,15 +15,13 @@
 }
 
 .section-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  font-family: 'BBH Sans Bartle', 'Orbitron', 'JetBrains Mono', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #0000c8;
+  font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
+  color: #fff;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  
-  filter: blur(0.5px);
 }
 
 .placeholder-content {
@@ -38,10 +37,22 @@
 }
 
 .placeholder-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   opacity: 0.9;
-  font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+}
+
+.section-title, .placeholder-content p, .section3-content a {
+  color: #fff;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+
+.section-title:hover, .placeholder-content p:hover, .section3-content a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @keyframes float {

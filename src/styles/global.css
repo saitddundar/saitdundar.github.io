@@ -3,16 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle:wght@400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Mona Sans', 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, 'Liberation Sans', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: dark;
-  color: #ffffff;
-  background-color: #000000;
+  color: #c9d1d9;
+  background-color: #0d1117;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,22 +22,32 @@
 
 a {
   font-weight: 400;
-  color: #000000;
+  color: #238636;
   text-decoration: none;
+  transition: color 0.2s;
 }
 a:hover {
-  color: #cccccc;
-}image.png
+  color: #2ea043;
+}
 
 body {
   margin: 0;
   padding: 0;
   min-width: 320px;
   overflow-x: hidden;
+  background: #0d1117;
+  color: #c9d1d9;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f6fc;
+  font-family: 'Mona Sans', 'Segoe UI', 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 h1 {
@@ -52,12 +62,14 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #161b22;
+  color: #c9d1d9;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background 0.2s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #238636;
+  background-color: #21262d;
 }
 button:focus,
 button:focus-visible {

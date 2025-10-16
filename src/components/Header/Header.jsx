@@ -26,26 +26,23 @@ const Header = ({ onContactToggle }) => {
     <header className="header">
       <nav className="nav">
         <ul className="nav-links">
-          <li><a href="https://github.com/saitddundar" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#section3" onClick={handleProjectsClick}>PROJECTS</a></li>
-          <li><a href="#" onClick={(e) => { e.preventDefault(); handleContactClick(); }}>CONTACT</a></li>
+          <li><a href="https://github.com/saitddundar" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#section3" onClick={handleProjectsClick}>Projects</a></li>
+          <li style={{ position: 'relative' }}>
+            <a href="#" onClick={(e) => { e.preventDefault(); handleContactClick(); }}>Contact</a>
+            {isContactOpen && (
+              <div className="contact-card minimal-contact-card" onMouseLeave={handleContactMouseLeave}>
+                <div className="contact-links">
+                  <a href="mailto:saitdndr51@gmail.com" target="_blank" rel="noopener noreferrer"> E-mail</a>
+                  <a href="https://www.linkedin.com/in/sait-d%C3%BCndar-267533202/" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
+                </div>
+              </div>
+            )}
+          </li>
         </ul>
       </nav>
       
-      {isContactOpen && (
-        <div className="contact-card" onMouseLeave={handleContactMouseLeave}>
-          <h3>Get in Touch</h3>
-          <div className="contact-links">
-            <a href="mailto:your-email@example.com" target="_blank" rel="noopener noreferrer">
-              📧 Email
-            </a>
-            <a href="https://linkedin.com/in/mehmet-sait-dundar" target="_blank" rel="noopener noreferrer">
-              💼 LinkedIn
-            </a>
-          </div>
-        </div>
-      )}
     </header>
   );
 };

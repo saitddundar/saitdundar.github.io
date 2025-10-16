@@ -3,8 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #d9d4ca;
+  background-color: #0d1117;
   padding: 4rem 2rem;
+  font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
+  color: #fff;
 }
 
 .section2-content {
@@ -16,30 +18,31 @@
 }
 
 .red-card {
-  background-color: #dc2626;
+  background-color: #161b22;
   border-radius: 16px;
   padding: 3rem;
   max-width: 900px;
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 20px 40px rgba(22, 27, 34, 0.4);
 }
+
 .about-section-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-family: 'BBH Sans Bartle', 'Orbitron', 'JetBrains Mono', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-} 
+  font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
+}
 
 .main-text {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fff;
   line-height: 1.6;
   margin-bottom: 2rem;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
   text-align: left;
 }
 
@@ -79,17 +82,21 @@
 }
 
 .service-item {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  color: #000000;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff;
+  font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
   padding: 0.5rem 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s, color 0.3s, text-decoration 0.2s;
+  cursor: pointer;
 }
 
 .service-item:hover {
-  border-bottom-color: #dc2626;
+  border-bottom: 2px solid #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
