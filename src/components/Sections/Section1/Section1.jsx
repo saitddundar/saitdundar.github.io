@@ -2,23 +2,19 @@ import React from 'react';
 import './Section1.css';
 
 const Section1 = () => {
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="section1" id="home">
       <div className="section1-content">
-        <h1 className="main-title">
-          Mehmet Sait Dündar
-        </h1>
-        <p className="subtitle">A computer science student passionate about backend development, cloud, and solving complex problems.</p>
+        <div className="text-content">
+          <h1 className="main-title">
+            <div className="name-line">Mehmet Sait</div>
+            <div className="name-line">Dündar</div>
+          </h1>
+          <p className="subtitle">A computer science student passionate about backend development, cloud, and solving complex problems.</p>
+        </div>
         
-        <div className="scroll-indicator" onClick={scrollToAbout}>
-          <div className="scroll-arrow"> </div>
+        <div className="image-content">
+          <img src="/kim-busik.webp" alt="Profile" className="profile-image" />
         </div>
       </div>
     </section>

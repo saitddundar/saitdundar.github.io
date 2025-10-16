@@ -27,7 +27,7 @@ const Header = ({ onContactToggle }) => {
       <nav className="nav">
         <ul className="nav-links">
           <li><a href="https://github.com/saitddundar" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
-          <li><a href="#ABOUT">ABOUT</a></li>
+          <li><a href="#about">ABOUT</a></li>
           <li><a href="#section3" onClick={handleProjectsClick}>PROJECTS</a></li>
           <li><a href="#" onClick={(e) => { e.preventDefault(); handleContactClick(); }}>CONTACT</a></li>
         </ul>
