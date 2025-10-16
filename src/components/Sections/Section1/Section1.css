@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
-  color: white;
+  background-color: #d9d4ca;
+  color: rgb(0, 0, 0);
   position: relative;
   padding: 0 2rem;
 }
@@ -15,21 +15,24 @@
 }
 
 .main-title {
-  font-size: 3.5rem;
-  font-weight: 600;
+  font-size: 5rem;
+  font-weight: 700;
   margin-bottom: 2rem;
-  font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.2;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.1;
   min-height: 4.2rem; /* Sabit yükseklik için */
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: -0.03em;
+  color: #e84545;
 }
 
 .cursor {
   font-weight: 300;
-  color: #fff;
+  color: #000000;
   animation: blink 1s infinite;
+  display: none;
 }
 
 .cursor.visible {
@@ -83,10 +86,17 @@
 }
 
 .scroll-arrow {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.7);
+  width: 30px;
+  height: 30px;
+  border-left: 2px solid rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  transform: rotate(-45deg);
   animation: bounce 2s infinite;
-  font-weight: 300;
+}
+
+.scroll-indicator:hover .scroll-arrow {
+  border-left-color: rgba(0, 0, 0, 0.9);
+  border-bottom-color: rgba(0, 0, 0, 0.9);
 }
 
 .scroll-indicator:hover .scroll-text {

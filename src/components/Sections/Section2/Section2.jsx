@@ -6,7 +6,9 @@ const Section2 = () => {
     <section className="section2" id="about">
       <div className="section2-content">
         <div className="red-card">
+          <h2 className="section-title">About Me</h2>
           <p className="main-text">
+            
            A CS Student passionate about backend development, cloud, and solving complex problems.
           
           </p>

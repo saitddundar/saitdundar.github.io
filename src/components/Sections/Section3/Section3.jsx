@@ -3,9 +3,9 @@ import './Section3.css';
 
 const Section3 = () => {
   return (
-    <section className="section3" id="contact">
+    <section className="section3" id="section3">
       <div className="section3-content">
-        <h2 className="section-title">Contact</h2>
+        <h2 className="section-title">Projects</h2>
         <div className="placeholder-content">
           
           <p>This section is under construction.</p>
