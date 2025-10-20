@@ -10,35 +10,32 @@
   font-family: 'Mona Sans', 'Segoe UI', 'Inter', Arial, sans-serif;
 }
 
-.section1-content {
-  text-align: left;
-  max-width: 1400px;
+.section1 canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  height: 100%;
+  z-index: 1;
+}
+
+.section1-content {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  justify-content: center;
   position: relative;
+  z-index: 2;
 }
 
 .text-content {
-  flex: 1;
-  max-width: 600px;
-}
-
-.image-content {
-  flex: 0 0 auto;
-  max-width: 500px;
-}
-
-.profile-image {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+  max-width: 600px;
 }
 
 .main-title {
@@ -48,34 +45,11 @@
   font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
   line-height: 1.1;
   color: #fff;
-}
-
-.name-line {
-  display: block;
-}
-
-.cursor {
-  font-weight: 300;
-  color: #000000;
-  animation: blink 1s infinite;
-  display: none;
-}
-
-.cursor.visible {
-  opacity: 1;
-}
-
-.cursor.hidden {
-  opacity: 0;
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  text-align: center;
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
   color: #fff;
   opacity: 0.92;
@@ -84,7 +58,7 @@
   max-width: 600px;
   margin: 0;
   margin-bottom: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .scroll-indicator {
@@ -158,41 +132,12 @@ a:hover, .main-title span:hover, .subtitle span:hover {
   }
   
   .section1-content {
-    flex-direction: column;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
   .text-content {
     max-width: 100%;
-  }
-  
-  .image-content {
-    max-width: 100%;
-  }
-  
-  .main-title {
-    font-size: 2.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-title {
-    font-size: 2rem;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 768px) {
-  .section1 {
-    padding: 0 1rem;
   }
   
   .main-title {

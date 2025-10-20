@@ -7,7 +7,6 @@ import './HomePage.css';
 const HomePage = () => {
   return (
     <div className="home-page">
-      
       <Section1 />
       <Section2 />
       <Section3 />
