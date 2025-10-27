@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './ProjectCard.css';
 
 const GithubIcon = ({ className = '' }) => (
@@ -8,14 +8,36 @@ const GithubIcon = ({ className = '' }) => (
 );
 
 const ProjectCard = ({ title, description, link, image, tags = [], github }) => {
+  const cardRef = useRef(null);
+  // Mouse move handler for glow effect
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    card.style.setProperty('--mx', `${mx}px`);
+    card.style.setProperty('--my', `${my}px`);
+    card.setAttribute('data-glow', 'true');
+  };
+  const handleMouseLeave = () => {
+    const card = cardRef.current;
+    if (!card) return;
+    card.setAttribute('data-glow', 'false');
+  };
   return (
-    <article className="project-card">
+    <article
+      className="project-card"
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      data-glow="false"
+    >
       {image && (
         <div className="project-image">
           <img src={image} alt={title} draggable={false} />
         </div>
       )}
-
       <div className="project-body">
         <div className="project-head">
           <h3 className="project-title">{title}</h3>
@@ -25,9 +47,7 @@ const ProjectCard = ({ title, description, link, image, tags = [], github }) => 
             </a>
           )}
         </div>
-
         <p className="project-desc">{description}</p>
-
         {tags && tags.length > 0 && (
           <div className="project-tags">
             {tags.map((t, i) => (

@@ -7,7 +7,7 @@
 
 .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
 .footer-row { display:flex; justify-content:center; align-items:center; gap:1rem; }
-.footer-label { color: #9fb3d8; font-size: 0.95rem; margin-right: 0.25rem; }
+.footer-label { color: #ffffff; font-size: 0.95rem; margin-right: 0.25rem; }
 
 .footer-content {
   display: flex;
@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9aa6b8;
+  color: #ffffff;
   text-decoration: none;
   transition: color 180ms ease, transform 180ms ease;
   cursor: pointer;
@@ -30,7 +30,7 @@
 
 .footer-link svg { width: 18px; height: 18px; display: block; }
 
-.footer-link:hover { color: #000000; transform: translateY(-2px); }
+.footer-link:hover { color: #676569; transform: translateY(-2px); }
 
 @media (max-width: 480px) {
   .site-footer { padding: 0.6rem 0; margin-top: 1.5rem; }

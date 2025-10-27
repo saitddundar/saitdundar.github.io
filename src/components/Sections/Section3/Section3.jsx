@@ -23,6 +23,10 @@ function ProjectsGrid() {
   const [isDragging, setIsDragging] = useState(false);
 
   const onPointerDown = (e) => {
+    // Only start drag if not clicking a link or button
+    if (e.target.closest('a, button')) {
+      return;
+    }
     const el = scrollerRef.current;
     if (!el) return;
     isDownRef.current = true;
@@ -61,28 +65,29 @@ function ProjectsGrid() {
       tabIndex={0}
     >
       <ProjectCard
-        title="Portfol.io"
-        description="A minimal portfolio site built with React + Vite. Smooth transitions and responsive layout."
+        title="Spring-Gallerist-App"
+        description="A modern and scalable RESTful API application built with Spring Boot for managing car gallery operations, including gallerist management, car inventory, customer records, and sales transactions."
         link="#"
-        github="#"
-        tags={["React", "Vite", "CSS"]}
+        github="https://github.com/saitddundar/spring-gallerist-app"
+        tags={["Java", "Spring Boot", "Hibernate", "RESTful API", "PostgreSQL",]}
+      />
+      <ProjectCard
+        title="Dante"
+        description="Interactive charts and data exploration tools using D3 and canvas optimizations."
+        link="#"
+        github="https://github.com/yusufkrnz/LabProjectBackendNest"
+        tags={["NestJS","FastAPI","TypeScript", "GraphQL", "MongoDB","..."]}
       />
 
       <ProjectCard
-        title="Animatic UI"
-        description="Micro-interactions and SVG animations. Built for fast prototyping and demos."
+        title="My Own Website"
+        description="Personal portfolio with smooth animations and responsive design."
         link="#"
         github="#"
         tags={["React", "Framer Motion", "SVG"]}
       />
 
-      <ProjectCard
-        title="DataViz Lab"
-        description="Interactive charts and data exploration tools using D3 and canvas optimizations."
-        link="#"
-        github="#"
-        tags={["D3","Canvas","TypeScript"]}
-      />
+      
     </div>
   );
 }
