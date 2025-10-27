@@ -1,12 +1,13 @@
 .section3 {
-  height: 100vh;
+  background-color: black;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  background-color: #000000;
   color: #fff;
-  padding: 2rem;
+  padding: 3.5rem 2rem 2rem;
   font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
+  border: none;
+  box-shadow: none !important;
 }
 
 .section3-content {
@@ -23,7 +24,6 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
-
 
 .placeholder-content {
   display: flex;
@@ -72,7 +72,6 @@
 }
 
 .section3-content a:hover {
-  /* keep underline for actual links only; remove underline for section titles */
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -90,11 +89,11 @@
   .section-title {
     font-size: 2rem;
   }
-  
+ 
   .placeholder-icon {
     font-size: 3rem;
   }
-  
+ 
   .placeholder-content p {
     font-size: 1rem;
   }

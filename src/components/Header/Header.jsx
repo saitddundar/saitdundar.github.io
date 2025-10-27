@@ -1,25 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css';
 
-const Header = ({ onContactToggle }) => {
-  const [isContactOpen, setIsContactOpen] = useState(false);
-
+const Header = () => {
   const handleProjectsClick = () => {
     document.getElementById('section3').scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleContactClick = () => {
-    setIsContactOpen(!isContactOpen);
-    if (onContactToggle) {
-      onContactToggle(!isContactOpen);
-    }
-  };
-
-  const handleContactMouseLeave = () => {
-    setIsContactOpen(false);
-    if (onContactToggle) {
-      onContactToggle(false);         
-    }
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    const el = document.getElementById('contact');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -30,19 +20,10 @@ const Header = ({ onContactToggle }) => {
           <li><a href="#about">About</a></li>
           <li><a href="#section3" onClick={handleProjectsClick}>Projects</a></li>
           <li style={{ position: 'relative' }}>
-            <a href="#" onClick={(e) => { e.preventDefault(); handleContactClick(); }}>Contact</a>
-            {isContactOpen && (
-              <div className="contact-card minimal-contact-card" onMouseLeave={handleContactMouseLeave}>
-                <div className="contact-links">
-                  <a href="mailto:saitdndr51@gmail.com" target="_blank" rel="noopener noreferrer"> E-mail</a>
-                  <a href="https://www.linkedin.com/in/sait-d%C3%BCndar-267533202/" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
-                </div>
-              </div>
-            )}
+            <a href="#contact" onClick={handleContactClick}>Contact</a>
           </li>
         </ul>
       </nav>
-      
     </header>
   );
 };
