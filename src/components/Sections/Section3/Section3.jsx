@@ -30,7 +30,6 @@ function ProjectsGrid() {
     el.setPointerCapture(e.pointerId);
     startXRef.current = e.clientX;
     scrollLeftRef.current = el.scrollLeft;
-    // prevent native drag of images
     e.preventDefault();
   };
 

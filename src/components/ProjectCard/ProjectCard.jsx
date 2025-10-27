@@ -35,12 +35,6 @@ const ProjectCard = ({ title, description, link, image, tags = [], github }) => 
             ))}
           </div>
         )}
-
-        {link && (
-          <a className="project-link" href={link} target="_blank" rel="noreferrer">
-            Visit project
-          </a>
-        )}
       </div>
     </article>
   );

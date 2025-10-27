@@ -36,30 +36,29 @@
 
 .project-head {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.6rem;
   justify-content: space-between;
 }
 
 .project-title {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   margin: 0;
-  transform: translateY(-6px);
 }
 
 .github-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   color: #cbd5e1;
   background: rgba(255,255,255,0.02);
   border-radius: 8px;
   text-decoration: none;
 }
 
-.github-btn svg { display: block; }
+.github-btn svg { display: block; width:20px; height:20px; }
 
 .project-desc {
   font-size: 0.98rem;
@@ -82,18 +81,7 @@
   border-radius: 999px;
 }
 
-.project-link {
-  margin-top: 0.25rem;
-  align-self: flex-start;
-  background: #ffffff10;
-  color: #9bd1ff;
-  text-decoration: none;
-  padding: 0.45rem 0.7rem;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.03);
-}
-
-.project-link:hover { text-decoration: underline; }
+/* removed .project-link per design request */
 
 @media (max-width: 768px) {
   .project-card { width: 92%; min-width: auto; height: auto; }
