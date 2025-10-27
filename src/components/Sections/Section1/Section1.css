@@ -109,7 +109,7 @@ a, .main-title span, .subtitle span {
   text-decoration: none;
   transition: border-bottom 0.2s;
 }
-a:hover, .main-title span:hover, .subtitle span:hover {
+a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }

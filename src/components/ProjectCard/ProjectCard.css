@@ -6,7 +6,9 @@
   width: 540px;
   min-width: 420px;
   height: 420px;
-  box-shadow: 0 10px 40px rgba(2,6,23,0.7);
+  /* base dark shadow + subtle blue-tinted shadow for depth */
+  box-shadow: 0 10px 40px rgba(2,6,23,0.7), 0 8px 30px rgba(3,37,102,0.22);
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -17,7 +19,28 @@
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 48px rgba(2,6,23,0.7);
+  box-shadow: 0 18px 48px rgba(2,6,23,0.7), 0 14px 44px rgba(3,37,102,0.34);
+}
+
+/* soft blurred blue glow under the card for a subtle blue accent */
+.project-card::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: -10px;
+  height: 40px;
+  background: rgba(10,40,120,0.12);
+  filter: blur(18px);
+  border-radius: 12px;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.project-card:hover::after {
+  background: rgba(10,40,120,0.18);
+  transform: translateY(2px) scale(1.02);
 }
 
 .project-image img {

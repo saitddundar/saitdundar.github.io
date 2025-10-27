@@ -71,7 +71,8 @@
   transition: text-decoration 0.2s;
 }
 
-.section-title:hover, .placeholder-content p:hover, .section3-content a:hover {
+.section3-content a:hover {
+  /* keep underline for actual links only; remove underline for section titles */
   text-decoration: underline;
   text-underline-offset: 3px;
 }

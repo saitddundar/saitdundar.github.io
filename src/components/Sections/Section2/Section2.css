@@ -99,8 +99,7 @@
 
 .service-item:hover {
   border-bottom: 2px solid #fff;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  /* keep border-bottom for hover emphasis, but remove underline to reserve underline for header only */
   color: #fff;
 }
 
