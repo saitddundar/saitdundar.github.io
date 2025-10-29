@@ -52,14 +52,6 @@ const Section2 = () => {
               radius={100}
               falloff="linear"
             />
-            <div className="services-list">
-              <span className="service-item">Visual Front-End Development</span>
-              <span className="service-item">Back-End Development</span>
-              <span className="service-item">Integration</span>
-              <span className="service-item">Motion Design</span>
-              <span className="service-item">UX Design</span>
-              <span className="service-item">Visual Design</span>
-            </div>
           </div>
           <div className="profile-container">
             <img ref={profilePicRef} src="/profile_pic.jpg" alt="Profile" className="profile-pic" />

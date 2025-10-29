@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem; /* Reduced gap after removing services list */
 }
 
 .red-card {
@@ -43,8 +43,6 @@
 
 .profile-container {
   flex-shrink: 0;
-  perspective: 1000px; /* Add perspective for 3D effect */
-  position: relative;
 }
 
 .profile-pic {
@@ -152,32 +150,6 @@
   font-weight: 300;
 }
 
-.services-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.service-item {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #fff;
-  font-family: 'Mona Sans', 'Segoe UI', Arial, sans-serif;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s, color 0.3s, text-decoration 0.2s;
-  cursor: pointer;
-}
-
-.service-item:hover {
-  border-bottom: 2px solid #fff;
-  /* keep border-bottom for hover emphasis, but remove underline to reserve underline for header only */
-  color: #fff;
-}
-
 @media (max-width: 768px) {
   .section2 {
     padding: 2rem 1rem;
@@ -191,18 +163,6 @@
   .main-text {
     font-size: 1.25rem;
     line-height: 1.5;
-  }
-  
-  .services-list {
-    gap: 0.5rem;
-  }
-  
-  .service-item {
-    font-size: 0.9rem;
-  }
-  
-  .profile-pic {
-    max-width: 200px; /* Adjust for smaller screens */
   }
 }
 
@@ -218,9 +178,5 @@
   .cta-button {
     padding: 10px 20px;
     font-size: 0.85rem;
-  }
-  
-  .profile-pic {
-    max-width: 150px; /* Further adjust for very small screens */
   }
 }
