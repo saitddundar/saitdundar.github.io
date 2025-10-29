@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import DarkVeil from '../../DarkVeil';
 import './Section1.css';
 
 const Section1 = () => {
+  useEffect(() => {
+    // Scroll to Section1 (Home) on page load
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <section className="section1" id="home">
       <DarkVeil />

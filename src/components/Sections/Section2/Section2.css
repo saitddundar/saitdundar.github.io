@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem; /* Reduced gap after removing services list */
+  gap: 3rem;
 }
 
 .red-card {
