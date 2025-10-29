@@ -41,8 +41,11 @@ const Section2 = () => {
     <section className="section2" id="about">
       <div className="section2-content" ref={containerRef}>
         <div className="profile-and-content">
+          <div className="profile-container">
+            <img ref={profilePicRef} src="/profile_pic.jpg" alt="Profile" className="profile-pic" style={{ height: 'auto', maxHeight: '100%' }} />
+          </div>
           <div className="content-container">
-            <h2 className="about-section-title left-align">About Me</h2>
+            <h2 className="about-section-title left-align">*About Me</h2>
             <VariableProximity
               label="A CS Student passionate about backend development, cloud, and solving complex problems. I love exploring new technologies and building scalable applications that make a difference. My journey in computer science has led me to specialize in server-side development and cloud architecture. I enjoy working with databases, APIs, and creating efficient solutions for real-world challenges. When I'm not coding, you can find me learning about emerging technologies or contributing to open-source projects. I believe in continuous learning and staying updated with the latest trends in software development."
               className="main-text"
@@ -52,9 +55,6 @@ const Section2 = () => {
               radius={100}
               falloff="linear"
             />
-          </div>
-          <div className="profile-container">
-            <img ref={profilePicRef} src="/profile_pic.jpg" alt="Profile" className="profile-pic" />
           </div>
         </div>
       </div>
