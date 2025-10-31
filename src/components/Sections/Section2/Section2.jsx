@@ -46,15 +46,12 @@ const Section2 = () => {
           </div>
           <div className="content-container">
             <h2 className="about-section-title left-align">*About Me</h2>
-            <VariableProximity
-              label="A CS Student passionate about backend development, cloud, and solving complex problems. I love exploring new technologies and building scalable applications that make a difference. My journey in computer science has led me to specialize in server-side development and cloud architecture. I enjoy working with databases, APIs, and creating efficient solutions for real-world challenges. When I'm not coding, you can find me learning about emerging technologies or contributing to open-source projects. I believe in continuous learning and staying updated with the latest trends in software development."
-              className="main-text"
-              fromFontVariationSettings="'wght' 400, 'opsz' 9"
-              toFontVariationSettings="'wght' 1000, 'opsz' 40"
-              containerRef={containerRef}
-              radius={100}
-              falloff="linear"
-            />
+            <div className="main-text" style={{ textAlign: 'left', maxWidth: '1000px', margin: '0 auto' }}>
+              <p>I’m a computer science student specializing in backend development, microservices, and cloud computing. I enjoy designing scalable, maintainable server-side systems and building resilient, well-documented APIs that power distributed applications. I focus on architecting microservice-based solutions that run reliably in the cloud, leveraging containerization, orchestration (e.g., Kubernetes), and cloud-native patterns to ensure fault tolerance, observability, and smooth deployments.</p>
+              <p>Solving complex problems is one of my core motivations — I like breaking down hard engineering challenges into manageable components, applying algorithmic thinking, and iterating on elegant, efficient solutions. I take particular pleasure in developing my own algorithms and heuristics to optimize performance, reduce latency, and improve resource utilization in real-world systems. Performance tuning, capacity planning, and designing for scalability are regular parts of my workflow.</p>
+              <p>I regularly work with relational and NoSQL databases, caching layers, message brokers, and distributed-system primitives (consensus, sharding, replication). I’m comfortable building CI/CD pipelines, writing infrastructure-as-code, and instrumenting systems for monitoring and alerting so production issues can be diagnosed and resolved quickly. I also value writing clear tests, documentation, and clean code to make systems easier to maintain and evolve.</p>
+              <p>Outside of hands-on engineering, I enjoy exploring new cloud services, contributing to open-source projects, and collaborating with teams to deliver production-ready features. I’m committed to continuous learning — reading research papers, experimenting with new tools, and refining my technical craft — and I aim to build robust, efficient systems that solve real problems and deliver measurable impact.</p>
+            </div>
           </div>
         </div>
       </div>

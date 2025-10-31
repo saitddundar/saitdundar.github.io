@@ -23,7 +23,11 @@ const Header = () => {
     <header className="header">
       <nav className="nav">
         <ul className="nav-links">
-          <li><a href="https://github.com/saitddundar" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li>
+            <a href="https://github.com/saitddundar" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects" onClick={handleProjectsClick}>Projects</a></li>
           <li style={{ position: 'relative' }}>
