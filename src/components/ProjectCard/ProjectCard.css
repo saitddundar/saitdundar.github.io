@@ -5,18 +5,16 @@
   padding: 1.5rem;
   width: 540px;
   min-width: 420px;
-  height: 420px;
-  /* no shadow */
+  max-width: 540px;
+  height: 480px;
   box-shadow: none !important;
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  border: 1 px solid #111118;
-  box-shadow: none !important;
+  border: 1px solid #111118;
   transition: transform 220ms cubic-bezier(.4,0,.2,1), box-shadow 320ms cubic-bezier(.4,0,.2,1), border-color 320ms cubic-bezier(.4,0,.2,1);
   scroll-snap-align: start;
-  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
 .project-card:hover {
@@ -42,7 +40,7 @@
 
 .project-image img {
   width: 100%;
-  height: 240px;
+  height: 220px;
   object-fit: cover;
   border-radius: 10px;
   display: block;
@@ -52,10 +50,11 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: stretch;
+  width: 100%;
+  align-items: center;
   position: relative;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .project-head {
@@ -99,10 +98,13 @@
 
 .project-desc {
   font-size: 0.98rem;
-  margin: 0 auto 1.8rem auto;
+  margin: 0 0 1.2rem 0;
   opacity: 0.92;
   color: #d1d5db;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .project-tags {
@@ -114,6 +116,8 @@
   right: 0;
   bottom: 1.5rem;
   justify-content: center;
+  z-index: 1;
+  width: 100%;
 }
 
 .tag {
@@ -124,10 +128,8 @@
   border-radius: 999px;
 }
 
-/* removed .project-link per design request */
-
 @media (max-width: 768px) {
-  .project-card { width: 92%; min-width: auto; height: auto; }
-  .project-image img { height: 180px; }
+  .project-card { width: 92%; min-width: auto; max-width: 92%; height: 420px; }
+  .project-image img { height: 160px; }
   .project-title { transform: none; font-size: 1.05rem; }
 }
