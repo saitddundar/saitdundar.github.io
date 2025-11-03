@@ -66,7 +66,7 @@ function ProjectsGrid() {
     >
       <ProjectCard
         title="Spring-Gallerist-App"
-        image="/spring-gallerist-app.png"
+        image="/photos/spring-gallerist-app.png"
         description="A modern and scalable RESTful API application built with Spring Boot for managing car gallery operations, including gallerist management, car inventory, customer records, and sales transactions."
         link="#"
         github="https://github.com/saitddundar/spring-gallerist-app"
@@ -84,7 +84,7 @@ function ProjectsGrid() {
 
       <ProjectCard
         title="My Own Website"
-        image="/my-website.png"
+        image="/photos/my-website.png"
         description="Personal portfolio with smooth animations and responsive design."
         link="#"
         github="#"
