@@ -1,5 +1,6 @@
 {
   "name": "saitdundar.github.io",
+  "homepage": "https://saitdundar.github.io/saitdundar.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "gsap": "^3.13.0",
     "html2canvas": "^1.4.1",
     "motion": "^12.23.24",
