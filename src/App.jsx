@@ -1,12 +1,11 @@
 import React from 'react'
-import MainLayout from './components/Layout/MainLayout'
-import HomePage from './pages/HomePage'
 
 function App() {
   return (
-    <MainLayout>
-      <HomePage />
-    </MainLayout>
+    <div style={{padding: '20px', background: '#0d1117', color: '#c9d1d9', minHeight: '100vh'}}>
+      <h1>Simple App</h1>
+      <p>If this works, we can move on to Mainlayout</p>
+    </div>
   )
 }
 
