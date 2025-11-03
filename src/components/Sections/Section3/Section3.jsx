@@ -52,6 +52,43 @@ function ProjectsGrid() {
     try { el.releasePointerCapture && el.releasePointerCapture(e.pointerId); } catch (err) {}
   };
 
+  // Define projects and sort by status: completed -> active -> in-progress -> archived
+  const projects = [
+    {
+      title: 'Spring-Gallerist-App',
+      image: '/photos/spring-gallerist-app.png',
+      description:
+        'A modern and scalable RESTful API application built with Spring Boot for managing car gallery operations, including gallerist management, car inventory, customer records, and sales transactions.',
+      link: '#',
+      github: 'https://github.com/saitddundar/spring-gallerist-app',
+      tags: ['Java', 'Spring Boot', 'Hibernate', 'RESTful API', 'PostgreSQL'],
+      status: 'completed',
+    },
+    {
+      title: 'Dante',
+      description:
+        'An Algorithm-as-a-Service (AaaS) application designed to act as a bridge, intelligently connecting project owners with the most suitable developers/contributors.',
+      link: '#',
+      github: 'https://github.com/yusufkrnz/LabProjectBackendNest',
+      tags: ['NestJS', 'FastAPI', 'GraphQL', 'Grafana', 'MongoDB', '...'],
+      status: 'active',
+    },
+    {
+      title: 'My Own Website',
+      image: '/photos/my-website.png',
+      description: 'Personal portfolio with smooth animations and responsive design.',
+      link: '#',
+      github: '#',
+      tags: ['React', 'JavaScript', 'HTML', 'CSS'],
+      status: 'completed',
+    },
+  ];
+
+  const statusOrder = { completed: 0, active: 1, 'in-progress': 2, archived: 3 };
+  const sortedProjects = [...projects].sort(
+    (a, b) => (statusOrder[a.status] ?? 99) - (statusOrder[b.status] ?? 99)
+  );
+
   return (
     <div
       ref={scrollerRef}
@@ -64,35 +101,9 @@ function ProjectsGrid() {
       onPointerLeave={onPointerUp}
       tabIndex={0}
     >
-      <ProjectCard
-        title="Spring-Gallerist-App"
-        image="/photos/spring-gallerist-app.png"
-        description="A modern and scalable RESTful API application built with Spring Boot for managing car gallery operations, including gallerist management, car inventory, customer records, and sales transactions."
-        link="#"
-        github="https://github.com/saitddundar/spring-gallerist-app"
-        tags={["Java", "Spring Boot", "Hibernate", "RESTful API", "PostgreSQL"]}
-        status="completed"
-      />
-      <ProjectCard
-        title="Dante"
-        description="Interactive charts and data exploration tools using D3 and canvas optimizations."
-        link="#"
-        github="https://github.com/yusufkrnz/LabProjectBackendNest"
-        tags={["NestJS","FastAPI","TypeScript", "GraphQL", "MongoDB","..."]}
-        status="active"
-      />
-
-      <ProjectCard
-        title="My Own Website"
-        image="/photos/my-website.png"
-        description="Personal portfolio with smooth animations and responsive design."
-        link="#"
-        github="#"
-        tags={["React", "Framer Motion", "SVG"]}
-        status="in-progress"
-      />
-
-      
+      {sortedProjects.map((p) => (
+        <ProjectCard key={p.title} {...p} />
+      ))}
     </div>
   );
 }
