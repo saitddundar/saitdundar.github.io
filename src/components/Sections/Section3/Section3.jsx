@@ -78,7 +78,7 @@ function ProjectsGrid() {
       image: '/photos/my-website.png',
       description: 'Personal portfolio with smooth animations and responsive design.',
       link: '#',
-      github: '#',
+      github: 'https://github.com/saitddundar/saitdundar.github.io',
       tags: ['React', 'JavaScript', 'HTML', 'CSS'],
       status: 'completed',
     },
