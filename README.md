@@ -2,28 +2,11 @@ My Personal Portfolio Website
 
 This repository contains the source code for my personal portfolio website, built to showcase my projects, skills, and professional experience.
 
-## Deployment
+### Troubleshooting
 
-This site is deployed on GitHub Pages.
-
-### Deploy Steps:
-
-1. Push your code to GitHub:
-   ```bash
-   git add .
-   git commit -m "Update portfolio"
-   git push origin main
-   ```
-
-2. Enable GitHub Pages:
-   - Go to repository Settings
-   - Navigate to Pages section
-   - Under "Source", select "Deploy from a branch"
-   - Select "main" branch and "/ (root)" folder
-   - Click Save
-
-3. Your site will be available at: `https://saitdundar.github.io`
-
-### Auto-deployment with GitHub Actions (Optional):
-
-If you want automatic builds, the included `.github/workflows/deploy.yml` will handle deployment automatically on every push to main branch.
+**Blank Page Issue:**
+If the deployed site shows a blank page, check the following:
+1.  Open the browser's developer console (F12). Look for `404 Not Found` errors.
+2.  Ensure `vite.config.js` has `base: '/'` since this is a user page (`username.github.io`).
+3.  Verify the GitHub Actions workflow (`.github/workflows/deploy.yml`) is correctly building the project and uploading the `./dist` directory.
+4.  If using `react-router-dom`, consider switching from `BrowserRouter` to `HashRouter` to handle client-side routing on GitHub Pages.
