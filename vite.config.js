@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/saitdundar.github.io/',
+  // Repository adı <kullanıcıadı>.github.io olduğu için base '/' olmalıdır.
+  base: '/',
   build: {
     outDir: 'dist'
   }
