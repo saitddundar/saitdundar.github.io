@@ -50,8 +50,8 @@ const Header = () => {
             as="button"
             className="cv-button-wrapper"
             color="#7c3aed"
-            speed="4s"
-            thickness={3.5}
+            speed="5s"
+            thickness={2.5}
             onClick={handleDownloadCV}
             aria-label="Download CV"
           >
