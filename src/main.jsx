@@ -1,13 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles/global.css'
-import App from './App.jsx'
-import { HashRouter } from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom'; // <-- BU SATIRI EKLE
+import App from './App';
+import './index.css'; // Veya diğer stiller
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <HashRouter>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter> {/* <-- BU SARMALAYICI ŞART */}
       <App />
-    </HashRouter>
-  </StrictMode>,
-)
+    </BrowserRouter>
+  </React.StrictMode>
+);
