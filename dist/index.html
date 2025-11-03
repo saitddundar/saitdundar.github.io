@@ -1,14 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="/photos/kim-busik.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>saitdundar.github.io</title>
-    <script type="module" crossorigin src="/assets/index-B1_iugj1.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CMKaIWDF.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Test, i hope so</title>
+    <style>
+        body {
+            background: #0d1117;
+            color: #c9d1d9;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 { color: #2ea043; }
+    </style>
+</head>
+<body>
+    <h1>site is working</h1>
+    <p>GitHub Pages is active!</p>
+    <p>Now we can add React.</p>
+    <p>Date: <span id="tarih"></span></p>
+
+    <script>
+        document.getElementById('tarih').textContent = new Date().toLocaleString('tr-TR');
+    </script>
+</body>
 </html>
