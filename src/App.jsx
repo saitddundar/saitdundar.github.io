@@ -1,11 +1,23 @@
 import React from 'react'
 
+// MainLayout'u import et ama basit tut
+function SimpleMainLayout({ children }) {
+  return (
+    <div style={{background: '#0d1117', color: '#c9d1d9', minHeight: '100vh'}}>
+      <div style={{padding: '20px'}}>
+        <h2> MainLayout Test</h2>
+        {children}
+      </div>
+    </div>
+  )
+}
+
 function App() {
   return (
-    <div style={{padding: '20px', background: '#0d1117', color: '#c9d1d9', minHeight: '100vh'}}>
-      <h1>Simple App</h1>
-      <p>If this works, we can move on to Mainlayout</p>
-    </div>
+    <SimpleMainLayout>
+      <h1> App + MainLayout is working</h1>
+      <p>If this works, we can move on to the original components...</p>
+    </SimpleMainLayout>
   )
 }
 
