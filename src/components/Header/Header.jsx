@@ -49,13 +49,12 @@ const Header = () => {
           <StarBorder
             as="button"
             className="cv-button-wrapper"
-            color="#a855f7"
+            color="#7c3aed"
             speed="4s"
-            thickness={1}
+            thickness={3.5}
             onClick={handleDownloadCV}
             aria-label="Download CV"
           >
-            <span className="cv-button-icon">📄</span>
             <span className="cv-button-text">Download CV</span>
           </StarBorder>
         </Magnet>

@@ -4,7 +4,7 @@ const StarBorder = ({
   as: Component = 'button',
   className = '',
   color = 'white',
-  speed = '6s',
+  speed = '3s',
   thickness = 1,
   children,
   ...rest

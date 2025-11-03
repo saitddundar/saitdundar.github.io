@@ -3,33 +3,32 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  background: transparent;
 }
 
 .border-gradient-bottom {
   position: absolute;
-  width: 300%;
-  height: 50%;
-  opacity: 0.8;
-  bottom: -12px;
+  width: 400%;
+  height: 110%;
+  opacity: 1;
+  bottom: -24px;
   right: -250%;
   border-radius: 50%;
-  animation: star-movement-bottom linear infinite alternate;
+  animation: star-movement-bottom linear infinite;
   z-index: 0;
-  filter: blur(8px);
+  filter: blur(4px);
 }
 
 .border-gradient-top {
   position: absolute;
-  opacity: 0.8;
-  width: 300%;
-  height: 50%;
-  top: -12px;
+  opacity: 1;
+  width: 400%;
+  height: 110%;
+  top: -24px;
   left: -250%;
   border-radius: 50%;
-  animation: star-movement-top linear infinite alternate;
+  animation: star-movement-top linear infinite;
   z-index: 0;
-  filter: blur(8px);
+  filter: blur(4px);
 }
 
 .inner-content {
