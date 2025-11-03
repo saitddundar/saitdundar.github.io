@@ -71,6 +71,7 @@ function ProjectsGrid() {
         link="#"
         github="https://github.com/saitddundar/spring-gallerist-app"
         tags={["Java", "Spring Boot", "Hibernate", "RESTful API", "PostgreSQL"]}
+        status="completed"
       />
       <ProjectCard
         title="Dante"
@@ -78,6 +79,7 @@ function ProjectsGrid() {
         link="#"
         github="https://github.com/yusufkrnz/LabProjectBackendNest"
         tags={["NestJS","FastAPI","TypeScript", "GraphQL", "MongoDB","..."]}
+        status="active"
       />
 
       <ProjectCard
@@ -87,6 +89,7 @@ function ProjectsGrid() {
         link="#"
         github="#"
         tags={["React", "Framer Motion", "SVG"]}
+        status="in-progress"
       />
 
       

@@ -7,8 +7,19 @@ const GithubIcon = ({ className = '' }) => (
   </svg>
 );
 
-const ProjectCard = ({ title, description, link, image, tags = [], github }) => {
+const ProjectCard = ({ title, description, link, image, tags = [], github, status = 'active' }) => {
   const cardRef = useRef(null);
+  
+  // Status configurations
+  const statusConfig = {
+    active: { color: '#10b981', label: 'Active', pulse: true },
+    'in-progress': { color: '#3b82f6', label: 'In Progress', pulse: true },
+    completed: { color: '#f59e0b', label: 'Completed', pulse: false },
+    archived: { color: '#8b5cf6', label: 'Archived', pulse: false }
+  };
+  
+  const currentStatus = statusConfig[status] || statusConfig.active;
+  
   // Mouse move handler for glow effect
   const handleMouseMove = (e) => {
     const card = cardRef.current;
@@ -40,7 +51,17 @@ const ProjectCard = ({ title, description, link, image, tags = [], github }) => 
       )}
       <div className="project-body">
         <div className="project-head">
-          <h3 className="project-title">{title}</h3>
+          <div className="project-title-wrapper">
+            <div className="status-indicator">
+              <span 
+                className={`status-dot ${currentStatus.pulse ? 'pulse' : ''}`}
+                style={{ '--status-color': currentStatus.color }}
+                aria-label={currentStatus.label}
+              />
+              <span className="status-label">{currentStatus.label}</span>
+            </div>
+            <h3 className="project-title">{title}</h3>
+          </div>
           {github && (
             <a className="github-btn" href={github} target="_blank" rel="noreferrer" aria-label={`Open ${title} on GitHub`}>
               <GithubIcon />

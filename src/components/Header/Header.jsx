@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import './Header.css';
+import Magnet from '../Magnet/Magnet';
+import StarBorder from '../StarBorder/StarBorder';
 
 const Header = () => {
   useEffect(() => {
@@ -19,6 +21,15 @@ const Header = () => {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/docs/MehmetSaitDündarCV.docx';
+    link.download = 'MehmetSaitDündarCV.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <header className="header">
       <nav className="nav">
@@ -34,6 +45,20 @@ const Header = () => {
             <a href="#contact" onClick={handleContactClick}>Contact</a>
           </li>
         </ul>
+        <Magnet padding={50} disabled={false} magnetStrength={40}>
+          <StarBorder
+            as="button"
+            className="cv-button-wrapper"
+            color="#a855f7"
+            speed="4s"
+            thickness={1}
+            onClick={handleDownloadCV}
+            aria-label="Download CV"
+          >
+            <span className="cv-button-icon">📄</span>
+            <span className="cv-button-text">Download CV</span>
+          </StarBorder>
+        </Magnet>
       </nav>
     </header>
   );
