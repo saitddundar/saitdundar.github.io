@@ -56,7 +56,7 @@ function ProjectsGrid() {
   const projects = [
     {
       title: 'Spring-Gallerist-App',
-      image: '/photos/spring-gallerist-app.png',
+      image: `${import.meta.env.BASE_URL}photos/spring-gallerist-app.png`,
       description:
         'A modern and scalable RESTful API application built with Spring Boot for managing car gallery operations, including gallerist management, car inventory, customer records, and sales transactions.',
       link: '#',
@@ -75,7 +75,7 @@ function ProjectsGrid() {
     },
     {
       title: 'My Own Website',
-      image: '/photos/my-website.png',
+      image: `${import.meta.env.BASE_URL}photos/my-website.png`,
       description: 'Personal portfolio with smooth animations and responsive design.',
       link: '#',
       github: 'https://github.com/saitddundar/saitdundar.github.io',

@@ -1,3 +1,6 @@
+/* ========================================
+   FONT IMPORTS
+   ======================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800;900&display=swap');
@@ -5,6 +8,9 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;600;700&display=swap');
 
+/* ========================================
+   CSS VARIABLES & ROOT SETTINGS
+   ======================================== */
 :root {
   font-family: 'Mona Sans', 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, 'Liberation Sans', Arial, sans-serif;
   line-height: 1.5;
@@ -21,29 +27,36 @@
   width: 100%;
 }
 
-a {
-  font-weight: 400;
-  color: #238636;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-a:hover {
-  color: #2ea043;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 320px;
-  overflow-x: hidden;
-  background: #0d1117;
-  color: #c9d1d9;
+/* ========================================
+   CSS RESET & BASE STYLES
+   ======================================== */
+* {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
 h1, h2, h3, h4, h5, h6 {
   color: #f0f6fc;
   font-family: 'Mona Sans', 'Segoe UI', 'Inter', Arial, sans-serif;
@@ -56,6 +69,22 @@ h1 {
   line-height: 1.1;
 }
 
+/* ========================================
+   LINKS
+   ======================================== */
+a {
+  font-weight: 400;
+  color: #238636;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #2ea043;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -75,5 +104,44 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ========================================
+   COMPONENTS
+   ======================================== */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }
 

@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom'; // <-- BU SATIRI EKLE
+import { BrowserRouter } from 'react-router-dom'; 
 import App from './App';
-import './index.css'; // Veya diğer stiller
-
+import './styles/global.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter> {/* <-- BU SARMALAYICI ŞART */}
+    <BrowserRouter> 
       <App />
     </BrowserRouter>
   </React.StrictMode>
