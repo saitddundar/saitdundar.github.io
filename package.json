@@ -1,6 +1,5 @@
 {
   "name": "saitdundar.github.io",
-  "homepage": "https://saitddundar.com/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "gh-pages -d dist -m \"Deploy\""
   },
   "dependencies": {
     "gsap": "^3.13.0",
