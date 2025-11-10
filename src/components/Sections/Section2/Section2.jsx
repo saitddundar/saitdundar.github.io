@@ -42,7 +42,7 @@ const Section2 = () => {
       <div className="section2-content" ref={containerRef}>
         <div className="profile-and-content">
           <div className="profile-container">
-            <img ref={profilePicRef} src={`${import.meta.env.BASE_URL}photos/profile-pic.jpg`} alt="Profile" className="profile-pic" style={{ height: 'auto', maxHeight: '100%' }} />
+            <img ref={profilePicRef} src={`${import.meta.env.BASE_URL}photos/profile_pic.jpg`} alt="Profile" className="profile-pic" style={{ height: 'auto', maxHeight: '100%' }} />
           </div>
           <div className="content-container">
             <h2 className="about-section-title left-align">*About Me</h2>
