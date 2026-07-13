@@ -1,109 +1,71 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import './Section3.css';
-import ProjectCard from '../../ProjectCard/ProjectCard';
+
+const projects = [
+  {
+    title: 'Vinctum Core',
+    description: 'A decentralized data courier platform enabling secure file transfers between devices using encrypted channels with multi-hop relay capabilities and automatic rerouting — no central cloud storage required.',
+    github: 'https://github.com/saitddundar/vinctum-core',
+    tags: ['Go', 'gRPC', 'libp2p', 'PostgreSQL', 'Redis', 'Docker'],
+    status: 'Completed',
+  },
+  {
+    title: 'Gordion VPN',
+    description: 'A self-hosted, peer-to-peer mesh VPN built with Go. Connects devices securely across NAT boundaries using WireGuard tunnels transported over libp2p.',
+    github: 'https://github.com/saitddundar/gordion-vpn',
+    tags: ['Go', 'WireGuard', 'libp2p', 'gRPC', 'Docker', 'Prometheus'],
+    status: 'Completed',
+  },
+  {
+    title: 'EANN Car',
+    description: 'A self-driving car simulation powered by Evolutionary Artificial Neural Networks. Cars learn to navigate complex tracks through natural selection and mutation — no backpropagation, just pure evolution.',
+    github: 'https://github.com/saitddundar/eann-car',
+    tags: ['Go', 'Ebitengine', 'Neural Networks', 'Genetic Algorithms'],
+    status: 'Completed',
+  },
+  {
+    title: 'Spring-Gallerist-App',
+    description: 'A RESTful API built with Spring Boot for managing car gallery operations — gallerist management, car inventory, customer records, and sales transactions.',
+    github: 'https://github.com/saitddundar/spring-gallerist-app',
+    tags: ['Java', 'Spring Boot', 'Hibernate', 'PostgreSQL'],
+    status: 'Completed',
+  },
+  {
+    title: 'Personal Website',
+    description: 'This portfolio site — minimal, clean, built with React.',
+    github: 'https://github.com/saitddundar/saitdundar.github.io',
+    tags: ['React', 'JavaScript', 'CSS'],
+    status: 'Completed',
+  },
+];
 
 const Section3 = () => {
   return (
-    <section className="section3" id="section3">
-      <div className="section3-content">
-        <h2 className="section-title">Projects</h2>
-        <ProjectsGrid />
+    <section className="projects-section" id="projects">
+      <h2 className="projects-title">Projects</h2>
+      <div className="projects-list">
+        {projects.map((project) => (
+          <div className="project-item" key={project.title}>
+            <div className="project-item-header">
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-item-name">
+                {project.title}
+                <svg className="project-external-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M3.5 3.5h5v5M8.5 3.5L3 9" />
+                </svg>
+              </a>
+              <span className={`project-status ${project.status.toLowerCase()}`}>{project.status}</span>
+            </div>
+            <p className="project-item-desc">{project.description}</p>
+            <div className="project-item-tags">
+              {project.tags.map((tag) => (
+                <span className="project-tag" key={tag}>{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
 export default Section3;
-
-function ProjectsGrid() {
-  const scrollerRef = useRef(null);
-  const isDownRef = useRef(false);
-  const startXRef = useRef(0);
-  const scrollLeftRef = useRef(0);
-  const [isDragging, setIsDragging] = useState(false);
-
-  const onPointerDown = (e) => {
-    // Only start drag if not clicking a link or button
-    if (e.target.closest('a, button')) {
-      return;
-    }
-    const el = scrollerRef.current;
-    if (!el) return;
-    isDownRef.current = true;
-    setIsDragging(true);
-    el.setPointerCapture(e.pointerId);
-    startXRef.current = e.clientX;
-    scrollLeftRef.current = el.scrollLeft;
-    e.preventDefault();
-  };
-
-  const onPointerMove = (e) => {
-    const el = scrollerRef.current;
-    if (!el || !isDownRef.current) return;
-    const dx = e.clientX - startXRef.current;
-    el.scrollLeft = scrollLeftRef.current - dx;
-  };
-
-  const onPointerUp = (e) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    isDownRef.current = false;
-    setIsDragging(false);
-    try { el.releasePointerCapture && el.releasePointerCapture(e.pointerId); } catch (err) {}
-  };
-
-  // Define projects and sort by status: completed -> active -> in-progress -> archived
-  const projects = [
-    {
-      title: 'Spring-Gallerist-App',
-      image: `${import.meta.env.BASE_URL}photos/spring-gallerist-app.png`,
-      description:
-        'A modern and scalable RESTful API application built with Spring Boot for managing car gallery operations, including gallerist management, car inventory, customer records, and sales transactions.',
-      link: '#',
-      github: 'https://github.com/saitddundar/spring-gallerist-app',
-      tags: ['Java', 'Spring Boot', 'Hibernate', 'RESTful API', 'PostgreSQL'],
-      status: 'completed',
-    },
-    {
-      title: 'Dante',
-      description:
-        'An Algorithm-as-a-Service (AaaS) application designed to act as a bridge, intelligently connecting project owners with the most suitable developers/contributors.',
-      link: '#',
-      github: 'https://github.com/yusufkrnz/LabProjectBackendNest',
-      tags: ['NestJS', 'FastAPI', 'GraphQL', 'Grafana', 'MongoDB', '...'],
-      status: 'active',
-    },
-    {
-      title: 'My Own Website',
-      image: `${import.meta.env.BASE_URL}photos/my-website.png`,
-      description: 'Personal portfolio with smooth animations and responsive design.',
-      link: '#',
-      github: 'https://github.com/saitddundar/saitdundar.github.io',
-      tags: ['React', 'JavaScript', 'HTML', 'CSS'],
-      status: 'completed',
-    },
-  ];
-
-  const statusOrder = { completed: 0, active: 1, 'in-progress': 2, archived: 3 };
-  const sortedProjects = [...projects].sort(
-    (a, b) => (statusOrder[a.status] ?? 99) - (statusOrder[b.status] ?? 99)
-  );
-
-  return (
-    <div
-      ref={scrollerRef}
-      role="list"
-      aria-label="Projects"
-      className={`projects-grid ${isDragging ? 'grabbing' : ''}`}
-      onPointerDown={onPointerDown}
-      onPointerMove={onPointerMove}
-      onPointerUp={onPointerUp}
-      onPointerLeave={onPointerUp}
-      tabIndex={0}
-    >
-      {sortedProjects.map((p) => (
-        <ProjectCard key={p.title} {...p} />
-      ))}
-    </div>
-  );
-}

@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../Header/Header';
+import SectionNav from '../SectionNav/SectionNav';
 import './MainLayout.css';
-""
+
 const MainLayout = ({ children }) => {
   return (
     <div className="main-layout">
-      <Header />
+      <SectionNav />
       <main className="main-content">
         {children}
       </main>
