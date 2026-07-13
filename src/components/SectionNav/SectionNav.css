@@ -1,0 +1,43 @@
+.section-nav {
+  position: fixed;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 100;
+}
+
+.section-nav-line {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.section-nav-bar {
+  width: 18px;
+  height: 2.5px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.section-nav-line.active .section-nav-bar {
+  width: 28px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.section-nav-line:hover .section-nav-bar {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+@media (max-width: 768px) {
+  .section-nav {
+    display: none;
+  }
+}
