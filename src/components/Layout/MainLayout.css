@@ -9,3 +9,32 @@
   z-index: 1;
   pointer-events: auto;
 }
+
+.site-footer {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 2.5rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-faint);
+}
+
+.footer-koi {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-koi);
+  opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}

@@ -11,6 +11,11 @@ const MainLayout = ({ children }) => {
       <main className="main-content">
         {children}
       </main>
+      <footer className="site-footer">
+        <span>© {new Date().getFullYear()} Mehmet Sait Dündar</span>
+        <span className="footer-koi" aria-hidden="true">&gt;&lt;(((°&gt;</span>
+        <a href="mailto:saitdndr51@gmail.com">saitdndr51@gmail.com</a>
+      </footer>
     </div>
   );
 };
