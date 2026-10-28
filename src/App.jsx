@@ -1,12 +1,13 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import MainLayout from './components/Layout/MainLayout';
 import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <MainLayout>
-      <HomePage />
-    </MainLayout>
+    <Routes>
+      <Route path="/" element={<MainLayout><HomePage /></MainLayout>} />
+    </Routes>
   );
 }
 

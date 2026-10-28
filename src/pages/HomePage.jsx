@@ -1,18 +1,20 @@
 import React from 'react';
-import Section1 from '../components/Sections/Section1/Section1';
+import Hero from '../components/Sections/Hero/Hero';
+import Experience from '../components/Sections/Experience/Experience';
 import Education from '../components/Sections/Education/Education';
 import About from '../components/Sections/About/About';
-import Section3 from '../components/Sections/Section3/Section3';
+import Projects from '../components/Sections/Projects/Projects';
 import Skills from '../components/Sections/Skills/Skills';
 import './HomePage.css';
 
 const HomePage = () => {
   return (
     <div className="home-page">
-      <Section1 />
+      <Hero />
+      <Experience />
       <Education />
       <About />
-      <Section3 />
+      <Projects />
       <Skills />
     </div>
   );

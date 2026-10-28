@@ -7,7 +7,7 @@ import './styles/global.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter> 
+    <BrowserRouter basename="/saitdundar.github.io">
       <App />
     </BrowserRouter>
   </React.StrictMode>

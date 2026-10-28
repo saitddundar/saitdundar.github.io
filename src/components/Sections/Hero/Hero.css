@@ -1,16 +1,17 @@
-/* ========================================
-   HERO SECTION
-   ======================================== */
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #0a0a0a;
+  background: transparent;
   padding: 6rem 2rem 0;
+  overflow: hidden;
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -21,9 +22,6 @@
   margin: 0 auto;
 }
 
-/* ========================================
-   PHOTO
-   ======================================== */
 .hero-photo-wrapper {
   flex-shrink: 0;
 }
@@ -34,48 +32,42 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center 85%;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-light);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
   display: block;
 }
 
-/* ========================================
-   INFO
-   ======================================== */
 .hero-info {
   display: flex;
   flex-direction: column;
 }
 
 .hero-name {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--color-white);
   letter-spacing: -0.03em;
   margin: 0 0 0.3rem 0;
 }
 
 .hero-title {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-size: 1.1rem;
   font-weight: 400;
-  color: #666666;
+  color: var(--color-subtle);
   margin: 0 0 0.8rem 0;
 }
 
 .hero-desc {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-size: 1.05rem;
-  color: #888888;
+  color: var(--color-muted);
   line-height: 1.6;
   max-width: 420px;
   margin: 0 0 1.5rem 0;
 }
 
-/* ========================================
-   SOCIAL LINKS
-   ======================================== */
 .hero-links {
   display: flex;
   flex-direction: row;
@@ -88,15 +80,15 @@
   flex-direction: row;
   align-items: center;
   gap: 0.45rem;
-  color: #777777;
+  color: var(--color-link);
   font-size: 0.95rem;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .hero-link:hover {
-  color: #e0e0e0;
+  color: var(--color-link-hover);
 }
 
 .hero-link svg {
@@ -105,10 +97,9 @@
   flex-shrink: 0;
 }
 
-/* ========================================
-   GITHUB CONTRIBUTION GRAPH
-   ======================================== */
 .github-graph {
+  position: relative;
+  z-index: 1;
   max-width: 900px;
   width: 100%;
   margin: 2.5rem auto 0;
@@ -125,20 +116,14 @@
   display: block;
 }
 
-/* ========================================
-   DIVIDER
-   ======================================== */
 .hero-divider {
   max-width: 900px;
   width: 100%;
   margin: 4rem auto 0;
   height: 1px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--color-border);
 }
 
-/* ========================================
-   RESPONSIVE
-   ======================================== */
 @media (max-width: 640px) {
   .hero-inner {
     flex-direction: column;

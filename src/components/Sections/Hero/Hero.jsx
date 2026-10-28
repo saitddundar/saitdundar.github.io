@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section1.css';
+import './Hero.css';
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
@@ -25,7 +25,7 @@ const ResumeIcon = () => (
   </svg>
 );
 
-const Section1 = () => {
+const Hero = () => {
   return (
     <section className="hero" id="hero">
       <div className="hero-inner">
@@ -80,4 +80,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default Hero;
