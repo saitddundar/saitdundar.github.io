@@ -1,0 +1,57 @@
+.pond {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pond pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  line-height: 1.12;
+  letter-spacing: 0;
+  white-space: pre;
+  overflow: hidden;
+  user-select: none;
+}
+
+.pond i {
+  font-style: normal;
+}
+
+.pond .w {
+  color: #b8b8b8;
+  opacity: 0.16;
+}
+
+.pond .k {
+  color: #b8a89f;
+  opacity: 0.5;
+}
+
+.pond .d {
+  color: #e2854a;
+  opacity: 0.52;
+}
+
+.pond .a {
+  color: #cd7b4f;
+  opacity: 0.46;
+}
+
+.pond .p {
+  color: #e8b190;
+  opacity: 0.38;
+}
+
+.pond .b {
+  color: #ededed;
+  opacity: 0.34;
+}
+
+.pond .l {
+  color: #ededed;
+  opacity: 0.36;
+}

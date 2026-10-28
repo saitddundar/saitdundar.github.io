@@ -1,8 +1,11 @@
 .main-layout {
   min-height: 100vh;
-  background: #0a0a0a;
+  background: transparent;
+  position: relative;
 }
 
 .main-content {
   position: relative;
+  z-index: 1;
+  pointer-events: auto;
 }
