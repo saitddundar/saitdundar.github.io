@@ -3,8 +3,8 @@ import './About.css';
 
 const About = () => {
   return (
-    <section className="about-section" id="about">
-      <h2 className="about-title">About</h2>
+    <section className="section" id="about">
+      <h2 className="section-title">About</h2>
       <p className="about-text">
         I'm a computer science student specializing in backend development, microservices, and cloud
         computing. I enjoy designing scalable server-side systems and building resilient APIs that

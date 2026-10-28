@@ -1,23 +1,7 @@
-.about-section {
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.about-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #e8e8e8;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
-}
-
 .about-text {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-size: 1.05rem;
-  color: #888;
+  color: var(--color-muted);
   line-height: 1.75;
   max-width: 650px;
 }
