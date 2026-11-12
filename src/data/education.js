@@ -1,7 +1,7 @@
 const education = [
   {
     university: 'Fırat University',
-    degree: 'Bachelor of Computer Engineering',
+    degree: 'B.Sc. in Software Engineering',
     date: '09/2023 — 06/2027',
     location: 'Elazığ, Turkey',
     logo: 'fırat-logo.png',
