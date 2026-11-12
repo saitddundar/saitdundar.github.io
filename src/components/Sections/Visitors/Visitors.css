@@ -1,0 +1,19 @@
+.visitors-note {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+.visitor-map {
+  min-height: 120px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #111;
+}
+
+.visitor-map img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

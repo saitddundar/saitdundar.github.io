@@ -5,6 +5,7 @@ import Education from '../components/Sections/Education/Education';
 import About from '../components/Sections/About/About';
 import Projects from '../components/Sections/Projects/Projects';
 import Skills from '../components/Sections/Skills/Skills';
+import Visitors from '../components/Sections/Visitors/Visitors';
 import './HomePage.css';
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
       <About />
       <Projects />
       <Skills />
+      <Visitors />
     </div>
   );
 };
